@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Informasi Sampah</title>
+  <link rel="stylesheet" href="../halaman2/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+  <nav>
+    <i class="fa-solid fa-trash-can" style="color: rgb(0, 0, 0);"></i>
+    <h2>Sistem Informasi Sampah</h2>
+  </nav>
+
+  <div class="section-row">
+    <div class="card">
+      <h1>Angkutan Sampah Perumahan</h1>
+      <p>
+        Layanan ini membantu mengatur pengangkutan sampah di lingkungan perumahan
+        agar lebih tertib dan bersih. Jadwal dilakukan secara rutin sesuai rute
+        yang telah ditentukan.
+      </p>
+
+      <div class="rute-container">
+        <div class="rute-card">
+          <div class="rute-cardd">
+            <h3>Rute A</h3>
+            <p>No 1 - 20</p>
+          </div>
+        </div>
+        
+        <div class="rute-card">
+          <div class="rute-cardd">
+            <h3>Rute B</h3>
+            <p>No 21 - 40</p>
+          </div>
+        </div>
+        
+        <div class="rute-card">
+          <div class="rute-cardd">
+            <h3>Rute C</h3>
+            <p>No 41 - 60</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Grafik Pengangkutan Sampah</h2>
+      <p>Data volume sampah per minggu untuk rute A, B, dan C.</p>
+      <canvas id="grafikPengangkutan" width="400" height="250"></canvas>
+    </div>
+  </div>
+
+  <div class="section-row">
+    <div class="card">
+      <h2>Jadwal Pengangkutan</h2>
+
+      <table>
+        <tr>
+          <th>Rute</th>
+          <th>Hari</th>
+          <th>Waktu</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>Senin</td>
+          <td>08.00 - 10.00</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>Rabu</td>
+          <td>08.00 - 10.00</td>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>Jumat</td>
+          <td>08.00 - 10.00</td>
+        </tr>
+      </table>
+
+      <div class="calendar-box">
+        <h3>Pilih Tanggal Pengambilan Sampah</h3>
+        <input type="date" id="tanggalInput">
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Kontak</h2>
+      <p>Jika Anda memiliki pertanyaan atau keluhan tentang layanan pengangkutan
+         sampah, silakan hubungi kami melalui formulir di bawah ini.</p>
+
+      <form>
+        <label>Nama</label>
+        <input type="text" id="NamaInput">
+        <label>No Rumah</label>
+        <input type="text" id="noRumahInput">
+        <label>Volume (kg)</label>
+        <input type="number" id="volumeInput" min="0" step="0.1" placeholder="Masukkan volume sampah">
+        <label>Pesan</label>
+        <textarea id="pesanInput" rows="4"></textarea>
+        <input type="submit" id="btnKirim" value="Kirim">
+      </form>
+    </div>
+  </div>
+
+  <div id="laporan" class="card">
+    <h2>Laporan</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Rute</th>
+          <th>No Rumah</th>
+          <th>Pesan</th>
+          <th>Waktu</th>
+          <th>Tindakan</th>
+          <th>Opsi</th>
+        </tr>
+      </thead>
+      <tbody id="isi">
+      </tbody>
+    </table>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../halaman2/js/script.js"></script>

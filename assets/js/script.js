@@ -180,7 +180,7 @@ formAngkut.addEventListener('submit', function(event) {
     document.getElementById('volumeAngkutInput').value = "";
 });
 
-// grafikkk. copy dari gugel, karena masih bingung
+// grafikkk
 const ctx = document.getElementById('grafikPengangkutan').getContext('2d');
 const grafikPengangkutan = new Chart(ctx, {
     type: 'bar',

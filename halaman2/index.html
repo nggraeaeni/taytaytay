@@ -13,118 +13,133 @@
   <nav>
     <i class="fa-solid fa-trash-can" style="color: rgb(0, 0, 0);"></i>
     <h2>Sistem Informasi Sampah</h2>
+
+      <a href="../index.html" class="back-button">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back
+      </a>
   </nav>
 
-  <div class="section-row">
-    <div class="card">
-      <h1>Angkutan Sampah Perumahan</h1>
-      <p>
-        Layanan ini membantu mengatur pengangkutan sampah di lingkungan perumahan
-        agar lebih tertib dan bersih. Jadwal dilakukan secara rutin sesuai rute
-        yang telah ditentukan.
-      </p>
+  <header>
+    <div class="section-row">
+      <div class="card">
+        <h1>Angkutan Sampah Perumahan</h1>
+        <p>
+          Layanan ini membantu mengatur pengangkutan sampah di lingkungan perumahan
+          agar lebih tertib dan bersih. Jadwal dilakukan secara rutin sesuai rute
+          yang telah ditentukan.
+        </p>
 
-      <div class="rute-container">
-        <div class="rute-card">
-          <div class="rute-cardd">
-            <h3>Rute A</h3>
-            <p>No 1 - 20</p>
+        <div class="rute-container">
+          <div class="rute-card">
+            <div class="rute-cardd">
+              <h3>Rute A</h3>
+              <p>No 1 - 20</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="rute-card">
-          <div class="rute-cardd">
-            <h3>Rute B</h3>
-            <p>No 21 - 40</p>
+          
+          <div class="rute-card">
+            <div class="rute-cardd">
+              <h3>Rute B</h3>
+              <p>No 21 - 40</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="rute-card">
-          <div class="rute-cardd">
-            <h3>Rute C</h3>
-            <p>No 41 - 60</p>
+          
+          <div class="rute-card">
+            <div class="rute-cardd">
+              <h3>Rute C</h3>
+              <p>No 41 - 60</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="card">
-      <h2>Grafik Pengangkutan Sampah</h2>
-      <p>Data volume sampah per minggu untuk rute A, B, dan C.</p>
-      <canvas id="grafikPengangkutan" width="400" height="250"></canvas>
-    </div>
-  </div>
-
-  <div class="section-row">
-    <div class="card">
-      <h2>Jadwal Pengangkutan</h2>
-
-      <table>
-        <tr>
-          <th>Rute</th>
-          <th>Hari</th>
-          <th>Waktu</th>
-        </tr>
-        <tr>
-          <td>A</td>
-          <td>Senin</td>
-          <td>08.00 - 10.00</td>
-        </tr>
-        <tr>
-          <td>B</td>
-          <td>Rabu</td>
-          <td>08.00 - 10.00</td>
-        </tr>
-        <tr>
-          <td>C</td>
-          <td>Jumat</td>
-          <td>08.00 - 10.00</td>
-        </tr>
-      </table>
-
-      <div class="calendar-box">
-        <h3>Pilih Tanggal Pengambilan Sampah</h3>
-        <input type="date" id="tanggalInput">
+      <div class="card">
+        <h2>Grafik Pengangkutan Sampah</h2>
+        <p>Data volume sampah per minggu untuk rute A, B, dan C.</p>
+        <canvas id="grafikPengangkutan" width="400" height="180"></canvas>
       </div>
     </div>
 
-    <div class="card">
-      <h2>Kontak</h2>
-      <p>Jika Anda memiliki pertanyaan atau keluhan tentang layanan pengangkutan
-         sampah, silakan hubungi kami melalui formulir di bawah ini.</p>
+    <div class="section-row">
+      <div class="card">
+        <h2>Jadwal Pengangkutan</h2>
 
-      <form>
-        <label>Nama</label>
-        <input type="text" id="NamaInput">
-        <label>No Rumah</label>
-        <input type="text" id="noRumahInput">
-        <label>Volume (kg)</label>
-        <input type="number" id="volumeInput" min="0" step="0.1" placeholder="Masukkan volume sampah">
-        <label>Pesan</label>
-        <textarea id="pesanInput" rows="4"></textarea>
-        <input type="submit" id="btnKirim" value="Kirim">
-      </form>
+        <table>
+          <tr>
+            <th>Rute</th>
+            <th>Hari</th>
+            <th>Waktu</th>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>Senin</td>
+            <td>08.00 - 10.00</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>Rabu</td>
+            <td>08.00 - 10.00</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>Jumat</td>
+            <td>08.00 - 10.00</td>
+          </tr>
+        </table>
+
+        <div class="pickup-form">
+          <h3>Jangan lupa di isi bila sampah sudah di angkut</h3>
+          <form id="formAngkut">
+            <label>Nama</label>
+            <input type="text" id="namaAngkutInput" required>
+            <label>Pilih Tanggal Pengambilan Sampah</label>
+            <input type="date" id="tanggalAngkutInput" required>
+            <label>No Rumah</label>
+            <input type="text" id="noRumahAngkutInput" required>
+            <label>Volume (kg)</label>
+            <input type="number" id="volumeAngkutInput" min="0" step="0.1" required>
+            <input type="submit" value="Konfirmasi Angkutan">
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Kontak</h2>
+        <p>Jika Anda memiliki pertanyaan atau keluhan tentang layanan pengangkutan
+          sampah, silakan hubungi kami melalui formulir di bawah ini.</p>
+
+        <form>
+          <label>Nama</label>
+          <input type="text" id="NamaInput">
+          <label>No Rumah</label>
+          <input type="text" id="noRumahInput">
+          <label>Pesan</label>
+          <textarea id="pesanInput" rows="2"></textarea>
+          <input type="submit" id="btnKirim" value="Kirim">
+        </form>
+
+        <div id="laporan">
+          <h2>Laporan</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>Rute</th>
+                <th>No Rumah</th>
+                <th>Pesan</th>
+                <th>Waktu</th>
+                <th>Tindakan</th>
+              </tr>
+            </thead>
+            <tbody id="isi">
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div id="laporan" class="card">
-    <h2>Laporan</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Nama</th>
-          <th>Rute</th>
-          <th>No Rumah</th>
-          <th>Pesan</th>
-          <th>Waktu</th>
-          <th>Tindakan</th>
-          <th>Opsi</th>
-        </tr>
-      </thead>
-      <tbody id="isi">
-      </tbody>
-    </table>
-  </div>
-
+  </header>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../halaman2/js/script.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

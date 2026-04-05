@@ -39,6 +39,23 @@ nav {
   z-index: 100;
 }
 
+.nav-links {
+  display: flex;
+  gap: 18px;
+  margin-left: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #1b4f20;
+}
+
 nav h2 {
   color: #1a4d33;
   margin: 0;

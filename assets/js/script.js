@@ -60,14 +60,13 @@ tombolKirim.addEventListener('click', function(event) {
             <td>${noRumah}</td>
             <td>${pesan}</td>
             <td>${waktu}</td>
-            <td>${Tindakan}</td>
             <td class="actions-cell">
                 <button class="btn-edit">Edit</button>
                 <button class="btn-hapus">Hapus</button>
             </td>
         `;
 
-        // Re-attach event listeners
+        // Re-attach 
         attachEventListeners(editingRow);
 
         editingRow = null;
@@ -224,5 +223,25 @@ const grafikPengangkutan = new Chart(ctx, {
                 }
             }
         }
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // pindahin form angkut ke bawah grafik
+    const formAngkutCard = document.querySelectorAll('.card')[2];
+    const grafikSection = document.querySelector('.grafik-section');
+
+    if (formAngkutCard && grafikSection) {
+        formAngkutCard.classList.add('form-angkut-bawah');
+        grafikSection.appendChild(formAngkutCard);
+    }
+
+    // pindahin laporan ke bawah semua card
+    const laporanSection = document.querySelector('.section-tabel');
+    const kolomKanan = document.querySelector('.kolom-kanan');
+
+    if (laporanSection && kolomKanan) {
+        kolomKanan.appendChild(laporanSection);
     }
 });

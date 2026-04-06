@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #F8FAF9;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(43, 122, 84, 0.3);
+    gap: 10px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar .nav-links li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: green
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-login:hover {
+    background-color: white;
+    color: #2B7A54;
+    transform: translateY(-5px);
+}
+
+/*bagian hero */
+.ats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    gap: 50px;
+}
+
+.ats-text {
+    flex: 1;
+}
+
+.ats-text h1 {
+    font-size: 4rem;
+    color: #1a4d33;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: rgb(124, 222, 124);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.ats-text p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+}
+
+.btn-g {
+    background-color: #2B7A54;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(43, 122, 84, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.btn-g:hover {
+    transform: translateX(10px);
+}
+
+.pct1 {
+    width: 100%;
+    max-width: 550px;
+    height: 350px;
+    background: #E5E7EB;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9CA3AF;
+    font-weight: 600;
+}
+
+
